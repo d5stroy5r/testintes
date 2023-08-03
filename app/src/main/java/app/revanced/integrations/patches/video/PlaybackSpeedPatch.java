@@ -9,6 +9,7 @@ import static app.revanced.integrations.utils.StringRef.str;
 import java.util.Objects;
 
 import app.revanced.integrations.settings.SettingsEnum;
+import app.revanced.integrations.whitelist.Whitelist;
 import app.revanced.integrations.utils.LogHelper;
 
 public class PlaybackSpeedPatch {
@@ -17,7 +18,7 @@ public class PlaybackSpeedPatch {
 
     public static void newVideoStarted(final String contentCpn, final boolean isLive) {
         try {
-            if (contentCpn.isEmpty() || Objects.equals(currentContentCpn, contentCpn))
+            if (contentCpn.isEmpty() || Objects.equals(currentContentCpn, contentCpn) || Whitelist.isChannelSPEEDWhitelisted())
                 return;
 
             currentContentCpn = contentCpn;
