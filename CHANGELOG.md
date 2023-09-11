@@ -1,3 +1,10 @@
+## [0.119.1](https://github.com/YT-Advanced/ReX-integrations/compare/v0.119.0...v0.119.1) (2023-09-11)
+
+
+### Bug Fixes
+
+* Correct ([b741f93](https://github.com/YT-Advanced/ReX-integrations/commit/b741f934c8482e921967cbd21366a0104c447805))
+
 # [0.119.0](https://github.com/YT-Advanced/ReX-integrations/compare/v0.118.1...v0.119.0) (2023-09-09)
 
 
