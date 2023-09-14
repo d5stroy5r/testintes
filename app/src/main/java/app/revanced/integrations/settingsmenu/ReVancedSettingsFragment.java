@@ -401,8 +401,9 @@ public class ReVancedSettingsFragment extends PreferenceFragment {
             Activity activity = ReVancedSettingsFragment.this.getActivity();
             boolean isIncludedSB = PatchStatus.SponsorBlock();
             boolean isIncludedSPEED = PatchStatus.VideoSpeed();
-                                     
-            if (isIncludedSB || isIncludedSPEED) {
+            boolean isIncludedADS = PatchStatus.VideoAds() && !SettingsEnum.SWITCH_CREATE_NOTIFICATION.getBoolean();
+
+            if (isIncludedSB || isIncludedSPEED || isIncludedADS) {
                 // Sponsorblock
                 if (isIncludedSB) {
                     Whitelist.setEnabled(WhitelistType.SPONSORBLOCK, SettingsEnum.SB_WHITELIST.getBoolean());
@@ -422,13 +423,24 @@ public class ReVancedSettingsFragment extends PreferenceFragment {
                     WhitelistSPEED.setWhitelistType(WhitelistType.SPEED);
                     this.whitelistingPreferenceScreen.addPreference(WhitelistSPEED);
                 }
+
+                // Video Ads
+                if (isIncludedADS) {
+                    Whitelist.setEnabled(WhitelistType.ADS, SettingsEnum.ADS_WHITELIST.getBoolean());
+
+                    WhitelistedChannelsPreference WhitelistADS = new WhitelistedChannelsPreference(activity);
+                    WhitelistADS.setTitle(str("revanced_whitelisting_ads"));
+                    WhitelistADS.setWhitelistType(WhitelistType.ADS);
+                    this.whitelistingPreferenceScreen.addPreference(WhitelistADS);
+                }
             } else {
                 //True is disable
                 enableDisablePreferences(
                     true,
                     SettingsEnum.OVERLAY_BUTTON_WHITELIST,
                     SettingsEnum.SPEED_WHITELIST,
-                    SettingsEnum.SB_WHITELIST
+                    SettingsEnum.SB_WHITELIST,
+                    SettingsEnum.ADS_WHITELIST
             );
             }
         } catch (Throwable th) {

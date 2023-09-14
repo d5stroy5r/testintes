@@ -14,6 +14,7 @@ import java.util.Arrays;
 import app.revanced.integrations.settings.SettingsEnum;
 import app.revanced.integrations.shared.PlayerType;
 import app.revanced.integrations.utils.LogHelper;
+import app.revanced.integrations.whitelist.Whitelist;
 
 public class SpoofPlayerParameterPatch {
 
@@ -76,7 +77,7 @@ public class SpoofPlayerParameterPatch {
      */
     public static String overridePlayerParameter(String originalValue) {
         try {
-            if (!SettingsEnum.SPOOF_PLAYER_PARAMETER.getBoolean() || originalValue.startsWith(PLAYER_PARAMETER_SHORTS)) {
+            if (Whitelist.isChannelADSWhitelisted() || !SettingsEnum.SPOOF_PLAYER_PARAMETER.getBoolean() || originalValue.startsWith(PLAYER_PARAMETER_SHORTS)) {
                 return originalValue;
             }
 

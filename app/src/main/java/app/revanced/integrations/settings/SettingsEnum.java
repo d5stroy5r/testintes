@@ -218,6 +218,7 @@ public enum SettingsEnum {
     EXTERNAL_DOWNLOADER_PACKAGE_NAME("revanced_external_downloader_package_name", STRING, "com.deniscerri.ytdl", true),
 
     // Channel Whitelist
+    ADS_WHITELIST("revanced_whitelist_ads", BOOLEAN, FALSE),
     SPEED_WHITELIST("revanced_whitelist_speed", BOOLEAN, FALSE),
     SB_WHITELIST("revanced_whitelisting_sponsorblock", BOOLEAN, FALSE),
 

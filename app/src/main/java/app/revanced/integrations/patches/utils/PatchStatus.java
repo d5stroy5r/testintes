@@ -22,6 +22,11 @@ public class PatchStatus {
         return false;
     }
 
+    public static boolean VideoAds() {
+        // Replace this with true if the Hide Video Ads patch succeeds
+        return false;
+    }
+
     public static boolean VideoSpeed() {
         // Replace this with true if the Default Video Speed patch succeeds
         return false;
