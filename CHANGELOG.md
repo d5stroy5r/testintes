@@ -1,3 +1,21 @@
+# [0.120.0](https://github.com/YT-Advanced/ReX-integrations/compare/v0.119.1...v0.120.0) (2023-09-19)
+
+
+### Bug Fixes
+
+* **music/hook-download-button:** change the default external downloader package name https://github.com/inotia00/ReVanced_Extended/issues/1340 ([2e0c27f](https://github.com/YT-Advanced/ReX-integrations/commit/2e0c27fe2f240430db3b31103968f51be792f2ca))
+* **music/spoof-app-version:** add missing dependencies ([b694bb4](https://github.com/YT-Advanced/ReX-integrations/commit/b694bb40690ac62a1579260b37cb0d37803cb03b))
+* **youtube/default-video-quality:** default video quality is not applied at cold start ([ae6fd88](https://github.com/YT-Advanced/ReX-integrations/commit/ae6fd88f4d134bfebe0cb82bf739c45bba8905fe))
+* **youtube/sponsorblock:** fetch to latest source ([769dee3](https://github.com/YT-Advanced/ReX-integrations/commit/769dee3b884e92256330377f394f216779f36a06))
+
+
+### Features
+
+* **integration:** move some dependence to dummy class path ([5dbcc82](https://github.com/YT-Advanced/ReX-integrations/commit/5dbcc8292a30977cd25d370f723db653761889b8))
+* **music:** add `replace-dismiss-queue` patch ([346ac5e](https://github.com/YT-Advanced/ReX-integrations/commit/346ac5e7255f57a2cf4d074ffb76b05a52da1fb1))
+* **music:** add `sponsorblock` patch https://github.com/inotia00/ReVanced_Extended/issues/97 ([8b6388e](https://github.com/YT-Advanced/ReX-integrations/commit/8b6388e580006f05aff66c7e8bff706ace018d14))
+* Readd Ads Whitelist ([8603db7](https://github.com/YT-Advanced/ReX-integrations/commit/8603db7474284ba5262c87b055f15823c05d8ee6))
+
 ## [0.119.1](https://github.com/YT-Advanced/ReX-integrations/compare/v0.119.0...v0.119.1) (2023-09-11)
 
 
