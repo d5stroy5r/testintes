@@ -113,7 +113,6 @@ public class PlayerPatch {
             return;
 
         if (view != null) {
-            view.setSoundEffectsEnabled(false);
             view.performClick();
         }
     }
